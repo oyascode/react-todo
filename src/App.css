@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Nunito:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+
+body {
+  font: 1em/1.5 'Nunito', sans-serif;
+  background: #E5E5E5
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-container {
+  width: 100%;
+  background: #004374;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header, .todo-btn, .todoList-container {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header h1{
+  color: #ffffff;
+  font-size: 1.4rem;
+  padding: 0.5em 0;
+}
+
+.todo-btn .btn {
+  width: 95px;
+  margin: 1.5em 0.8em 1.7em 0;
+  padding: 0.8em;
+  text-align: left;
+  font-size: 0.7rem;
+  background: #ffffff;
+  color: #004374;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.todo-btn .btn:hover {
+  transform: scale(0.99);
+  opacity: 0.95;
+}
+
+.todo-btn .active {
+  background: #004374;
+  color: #96ECFF;
+}
+
+.todo-item {
+  width: 100%;
+  background: #ffffff;
+  margin: 0.6em 0;
+  /* padding: 0.5em 1em; */
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-heading {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.7em 1.5em 0.9em 0.7em;
+  font-size: 0.8rem;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-title {
+  padding-left: 2em;
+  font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-priority {
+  margin-left: auto;
+  font-size: 0.9rem;
 }
+
+.todo-description {
+  margin-left: 2.6em;
+  padding: 0.9em;
+  font-size: 0.8rem;
+  color: #555555;
+  font-family: 'Roboto', sans-serif;
+}
+
+.todo-done .todo-heading {
+  background: #004374;
+  color: #ffffff;
+}
+
+
+
