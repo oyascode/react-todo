@@ -2,17 +2,25 @@
 
 body {
   font: 1em/1.5 'Nunito', sans-serif;
-  background: #E5E5E5
+  background: #E5E5E5;
+  color: #333;
 }
 
 .header-container {
   width: 100%;
   background: #004374;
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.header, .todo-btn, .todoList-container {
-  width: 80%;
-  margin: 0 auto;
+.header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header h1{
@@ -21,7 +29,16 @@ body {
   padding: 0.5em 0;
 }
 
-.todo-btn .btn {
+.header, .todo-btn, .todoList-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.todo-btn {
+  margin-top: 5em;
+}
+
+.todo-btn button, .btn {
   width: 95px;
   margin: 1.5em 0.8em 1.7em 0;
   padding: 0.8em;
@@ -35,15 +52,58 @@ body {
   cursor: pointer;
 }
 
-.todo-btn .btn:hover {
-  transform: scale(0.99);
-  opacity: 0.95;
-}
-
 .todo-btn .active {
   background: #004374;
   color: #96ECFF;
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  width: 350px;
+  background: #eceaea;
+  padding: 0.5em 0.9em;
+}
+.modal-header {
+  border-bottom: 1px solid #ccc;
+  padding: 0.6em 0;
+}
+
+.modal-title {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #ddd;
+  resize: none;
+  padding: 0.8em;
+  margin-bottom: 1em;
+}
+
+.modal-body {
+  padding: 0.6em 0;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-top: 1px solid #ccc;
+}
+
 
 .todo-item {
   width: 100%;
@@ -77,7 +137,7 @@ body {
 }
 
 .todo-description {
-  margin-left: 2.6em;
+  margin-left: 3.3em;
   padding: 0.9em;
   font-size: 0.8rem;
   color: #555555;
